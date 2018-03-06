@@ -37,7 +37,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -82,42 +82,38 @@
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
-
-          <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <img class="d-block img-fluid" src="https://i.pinimg.com/originals/2c/29/81/2c29811287b701b97ea31140ed6fca8a.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="https://tanveersure.files.wordpress.com/2016/10/avslide-1.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block img-fluid" src="https://www.cathaypacific.com/content/dam/focal-point/cx/travel-information/flying%20with%20us/aircraft-fleet-section.jpg/_jcr_content/renditions/cq5dam.rendition.900.350.jpg" alt="Third slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+          <div class="container"><br>
+          <center><h2>Book Your Flight</h2></center><hr>
+            <form action="/action_page.php">
+          <div class="radio">
+            <label><input type="radio" name="roundtrip"> Round Trip</label> &nbsp;
+            <label><input type="radio" name="oneway"> One-Way </label> &nbsp;
+            <br>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" placeholder="From" name="from">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="pwd" placeholder="To" name="to">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Departing" class="form-control" name="departing" onfocus="(this.type='date')">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Returning" class="form-control" name="returning" onfocus="(this.type='date')">
+          </div>
+          <button type="submit" class="btn btn-default">Book Now</button>
+        </form><br><hr>
           </div>
 
-          <div class="row">
+          <!-- <div class="row">
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                <!-- <div class="card-body">
+                <a href="#"><img class="card-img-top" src="http://triadmomsonmain.com/wp-content/uploads/2016/09/snacks-700x400.jpg" alt=""></a>
+                <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="#">On-Board Snacks</a>
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -130,10 +126,10 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="https://www.cockpit4u.com/fileadmin/dms/Type_Rating/Bombardier/cockpit4u_type-rating_bombardier_crj900_700x400.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Two</a>
+                    <a href="#">Special Offers</a>
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -146,10 +142,10 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="http://lucasstoioff.com/wp-content/uploads/2015/05/positive-negative-feedback-1-700x400.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Three</a>
+                    <a href="#">Feedback</a>
                   </h4>
                   <h5>$24.99</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -158,9 +154,9 @@
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
-            </div>
+            </div>-->
 
-            <div class="col-lg-4 col-md-6 mb-4">
+            <!-- <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                 <div class="card-body">
@@ -206,7 +202,7 @@
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
-            </div>
+            </div>-->
 
           </div>
           <!-- /.row -->
