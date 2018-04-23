@@ -72,10 +72,10 @@
           <h1 class="my-4">Fly with Pride</h1>
           <div class="list-group">
             <a href="book.html" class="list-group-item">Book a Flight</a>
-            <a href="#" class="list-group-item">Web Check-In</a>
+            <a href="web-check.html" class="list-group-item">Web Check-In</a>
             <a href="Travel-information.html" class="list-group-item">Travel Information</a>
             <a href="#" class="list-group-item">Baggage</a>
-            <a href="#" class="list-group-item">Flight Status</a>
+            <a href="https://www.mumbaiairport.com/departures.php" class="list-group-item">Flight Status</a>
           </div>
 
         </div>
@@ -84,14 +84,14 @@
         <div class="col-lg-9">
           <div class="container"><br>
           <center><h2>Log In</h2></center><hr>
-            <form action="/action_page.php"><br>
+            <form action="login.php" method="post"><br>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email">
+                <input type="text" name="u_name" class="form-control" placeholder="Username">
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="password">
+                <input type="password" class="form-control" name="pass" placeholder="Password">
               </div>
-          <button type="submit" class="btn btn-danger">Log In</button>
+          <button type="submit" class="btn btn-danger" name="login">Log In</button>
         </form><br><hr>
           </div>
 

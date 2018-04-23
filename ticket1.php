@@ -82,33 +82,58 @@
         <!-- /.col-lg-3 -->
 
         <div class="col-lg-9">
-          <div class="container"><br>
-          <center><h2>Sign Up</h2></center>
-            <form action="/action_page.php"><br>
-              <div class="form-group">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td><input type="text" class="form-control" placeholder="Name" name="name"></td>
-                      <td><input type="tel" class="form-control" placeholder="Phone Number" name="phone"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="form-group">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td><input type="email" class="form-control" placeholder="Email" name="email"></td>
-                      <td><input type="text" class="form-control" placeholder="Password" name="password"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Address" class="form-control" rows="5" id="comment"></textarea>
-              </div>
-          <button type="submit" class="btn btn-danger">Sign Up</button>
+          <div class="container">
+              <form action="index.html" method="post">
+              <br><br>
+                <?php
+                  include 'connect.php';
+
+                  $sql=" select id from booking order by id desc limit 1;";
+                	$result = $con->query($sql);
+                	if ($result->num_rows > 0)
+                	{
+                		while($row = $result->fetch_array())
+                		{
+                			$id=$row['id'];
+                			// echo$id;
+                		}
+                	}
+
+                  $sql1= " SELECT * FROM booking WHERE id='$id' ";
+                	$result1=mysqli_query($con,$sql1);
+                	if(($result1->num_rows)>0)
+                	{
+                    while($row1 = $result1->fetch_array())
+                		{
+                      $adult = $row1['adult'];
+                      $children = $row1['children'];
+                      $infant = $row1['infant'];
+                      $class = $row1['class'];
+                      $dep = $row1['depature_from'];
+                      $dist= $row1['arrival_to'];
+                      $date=$row1['depature_date'];
+                      $date1=$row1['arrival_date'];
+                    }
+                	}
+
+                  echo "<h1>$class</h1>";
+                  for ($i=0; $i <$adult ; $i++) {
+                    echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
+                  }
+                  echo "<br>";
+                  echo "<br>";
+                  for ($i=0; $i <$children ; $i++) {
+                    echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
+                  }
+
+                  echo "<br>";
+                  echo "<br>";
+                  for ($i=0; $i <$infant ; $i++) {
+                    echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
+                  }
+
+                 ?>
+<input type="submit" value="Print-Ticket">Print-Ticket
         </form><br><hr>
           </div>
 
@@ -126,6 +151,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
+    <br><br><br><br><br><br>
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Aviation Management System.<br>Partners Star Alliance</p>

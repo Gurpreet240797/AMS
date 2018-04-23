@@ -144,6 +144,23 @@ var readyInterval = setInterval(function() {
 https://goo.gl/PLbrBK
 */
   </script>
+
+  <script type="text/javascript">
+  function cardnumber(inputtxt)
+{
+var cardno = /^(?:3[47][0-9]{13})$/;
+if(inputtxt.value.match(cardno))
+      {
+    return true;
+      }
+    else
+      {
+      alert("Not a valid Amercican Express credit card number!");
+      return false;
+      }
+}
+  </script>
+
   <style media="screen">
     #nav-btn{
       height: 40px;
@@ -241,10 +258,10 @@ https://goo.gl/PLbrBK
           <h1 class="my-4">Fly with Pride</h1>
           <div class="list-group">
             <a href="book.html" class="list-group-item">Book a Flight</a>
-            <a href="#" class="list-group-item">Web Check-In</a>
+            <a href="web-check.html" class="list-group-item">Web Check-In</a>
             <a href="Travel-information.html" class="list-group-item">Travel Information</a>
             <a href="#" class="list-group-item">Baggage</a>
-            <a href="#" class="list-group-item">Flight Status</a>
+            <a href="https://www.mumbaiairport.com/departures.php" class="list-group-item">Flight Status</a>
           </div>
 
         </div>
@@ -270,7 +287,7 @@ https://goo.gl/PLbrBK
   </div>
   </div>
   <div class="panel-body">
-  <form role="form" id="payment-form">
+  <form role="form" id="payment-form" method="post" action="payment.php">
   <div class="row">
   <div class="col-xs-12">
   <div class="form-group">
@@ -280,6 +297,7 @@ https://goo.gl/PLbrBK
   type="tel"
   class="form-control"
   name="cardNumber"
+  onclick="cardnumber(document.form1.text1)"
   placeholder="Valid Card Number"
   autocomplete="cc-number"
   required autofocus
