@@ -117,23 +117,29 @@
                 	}
 
                   echo "<h1>$class</h1>";
+                  echo "<hr>";
+                  echo "<br>";
+
+                  echo "<h3>$adult</h3>";
                   for ($i=0; $i <$adult ; $i++) {
                     echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
                   }
                   echo "<br>";
                   echo "<br>";
+                  echo "<h3>$children</h3>";
                   for ($i=0; $i <$children ; $i++) {
                     echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
                   }
 
                   echo "<br>";
                   echo "<br>";
+                  echo "$infant";
                   for ($i=0; $i <$infant ; $i++) {
                     echo'<input type="text" name="username" class="form-control" placeholder="Enter your name">';
                   }
 
                  ?>
-<input type="submit" value="Print-Ticket">Print-Ticket
+<input type="submit" value="Print-Ticket">
         </form><br><hr>
           </div>
 

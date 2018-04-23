@@ -1,6 +1,6 @@
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST')
-{	
+{
 include 'connect.php';
 $b="No";
 $trip=$_POST['trip'];
@@ -17,7 +17,7 @@ $class=$_POST['class'];
 $sql="INSERT INTO booking ( depature_from,arrival_to,depature_date,arrival_date,adult,children,infant,class,payment)VALUES('$from','$to','$departing','$returning','$adults','$children','$infants','$class','$b')";
 if($result=$con->query($sql))
 	{
-	echo "<script>document.location='payment.html'</script>";
+	echo "<script>document.location='payment2.html'</script>";
 	}
 	else
 	{
@@ -37,7 +37,7 @@ $class=$_POST['class'];
 $sql="INSERT INTO booking ( depature_from,arrival_to,depature_date,arrival_date,adult,children,infant,class,payment)VALUES('$from','$to','$departing','$a','$adults','$children','$infants','$class','$b')";
 if($result=$con->query($sql))
 	{
-	echo "<script>document.location='payment.html'</script>";
+	echo "<script>document.location='payment2.html'</script>";
 	}
 	else
 	{
